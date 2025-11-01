@@ -90,6 +90,7 @@ export default function Home() {
 
                     {/* Story Card */}
                     <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 sm:p-8 flex flex-col h-full">
+                      <h3 className="text-xl sm:text-2xl font-bold text-yellow-400 mb-6">Objective</h3>
                       <div className="space-y-5 text-base leading-relaxed">
                         <p>
                           Jamaican born <strong className="text-yellow-400">Capt. Barrington Irving</strong>, Guinness World Record Holder as the first Black man and youngest person to fly solo around the world, is taking flight once again, this time for humanity.
