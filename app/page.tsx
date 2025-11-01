@@ -172,7 +172,7 @@ export default function Home() {
                 <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-6 sm:p-8">
                   <div className="text-center space-y-6">
                     <div>
-                      <h3 className="text-3xl sm:text-4xl font-bold text-yellow-400 mb-2">DONATE NOW</h3>
+                      <h3 className="text-3xl sm:text-4xl font-bold text-yellow-400 mb-2">DONATE</h3>
                       <p className="text-slate-300 text-sm">Your contribution makes a difference</p>
                     </div>
                     
@@ -205,7 +205,7 @@ export default function Home() {
                           target="_blank"
                           rel="noopener noreferrer"
                         >
-                          DONATE NOW
+                          DONATE
                         </a>
                       </Button>
                       
