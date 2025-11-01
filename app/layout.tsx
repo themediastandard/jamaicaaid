@@ -19,6 +19,14 @@ export const metadata: Metadata = {
     title: "Mission of Hope: Humanitarian Flight to Jamaica",
     description: "Support Capt. Barrington Irving's mission to deliver critical supplies to Jamaica",
     type: "website",
+    images: [
+      {
+        url: "/images/og.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Mission of Hope: Humanitarian Flight to Jamaica",
+      },
+    ],
   },
 };
 
