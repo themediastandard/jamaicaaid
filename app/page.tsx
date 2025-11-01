@@ -82,7 +82,7 @@ export default function Home() {
                           src="/people/Barrington1b.jpg"
                           alt="Capt. Barrington Irving"
                           fill
-                          className="object-cover object-[90%_center]"
+                          className="object-cover object-[70%_center] lg:object-[90%_center]"
                           priority
                         />
                       </div>
