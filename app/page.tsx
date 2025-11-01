@@ -4,14 +4,21 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-white">
-      {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-green-950 to-slate-900 text-white overflow-hidden">
-        {/* Subtle animated background */}
-        <div className="absolute inset-0 opacity-5">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(255,255,255,0.1)_1px,_transparent_1px)] bg-[length:100px_100px]" />
-        </div>
+    <div className="min-h-screen bg-slate-900">
+      {/* Unified Background for All Sections */}
+      <div className="fixed inset-0">
+        <Image
+          src="/images/camoflag.png"
+          alt="Jamaica Flag Camo Pattern"
+          fill
+          className="object-cover blur-sm opacity-30"
+          priority
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-slate-900/60 via-slate-900/40 to-slate-900/60" />
+      </div>
 
+      {/* Hero Section */}
+      <section className="relative min-h-screen flex items-center justify-center text-white overflow-hidden">
         <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
           {/* Top Navigation Bar */}
           <div className="absolute top-0 left-0 right-0 px-4 sm:px-6 lg:px-8 pt-6">
@@ -53,51 +60,54 @@ export default function Home() {
               </p>
             </div>
 
-            {/* Content Grid - 2 Column Layout */}
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 mt-20">
-              {/* Left Column - Captain Photo & Story */}
-              <div className="space-y-6">
-                {/* Captain Photo Section */}
-                <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6">
-                  <div className="text-sm text-yellow-400 font-semibold mb-4 uppercase tracking-wide">Capt. Barrington Irving</div>
-                  <div className="aspect-[3/4] bg-gradient-to-br from-slate-800 to-slate-900 rounded-xl overflow-hidden border border-white/10 relative">
-                    <Image
-                      src="/people/Barrington1b.jpg"
-                      alt="Capt. Barrington Irving"
-                      fill
-                      className="object-cover"
-                      priority
-                    />
+            {/* Content - Symmetrical 2-Column on Desktop, Single Column on Mobile */}
+            <div className="max-w-7xl mx-auto mt-20">
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
+                {/* Top Section - Photo Left, Bio Right */}
+                <div className="lg:col-span-2">
+                  <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
+                    {/* Captain Photo Section */}
+                    <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 flex flex-col h-full">
+                      <div className="text-sm text-yellow-400 font-semibold mb-4 uppercase tracking-wide">Capt. Barrington Irving</div>
+                      <div className="flex-1 bg-gradient-to-br from-slate-800 to-slate-900 rounded-xl overflow-hidden border border-white/10 relative min-h-[500px]">
+                        <Image
+                          src="/people/Barrington1b.jpg"
+                          alt="Capt. Barrington Irving"
+                          fill
+                          className="object-cover object-[90%_center]"
+                          priority
+                        />
+                      </div>
+                    </div>
+
+                    {/* Story Card */}
+                    <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 sm:p-8 flex flex-col h-full">
+                      <div className="space-y-5 text-base leading-relaxed">
+                        <p>
+                          Jamaican born <strong className="text-yellow-400">Capt. Barrington Irving</strong>, Guinness World Record Holder as the first Black man and youngest person to fly solo around the world, is taking flight once again, this time for humanity.
+                        </p>
+                        <p>
+                          On November 10th & 11th, Capt. Irving will lead a massive humanitarian mission, delivering over 100,000 pounds of critical supplies aboard his own aircraft and a Boeing 737-800 cargo jet bound for Jamaica. From the runway to the heart of the island, these supplies will be placed directly into the hands of local organizations and communities in need.
+                        </p>
+                        <p>
+                          Through his 501(c)(3) non-profit organization - Experience Aviation, he has coordinated and delivered more than half a million pounds of humanitarian supplies, most notably during Hurricane Dorian in the Bahamas and Hurricane Helene in North Carolina.
+                        </p>
+                        <p className="pt-4 border-t border-white/10">
+                          <strong className="text-yellow-400">Financial contributions</strong> can be made to the Experience Aviation nonprofit organization and are <strong className="text-yellow-400">tax-deductible</strong>.
+                        </p>
+                      </div>
+                    </div>
                   </div>
                 </div>
 
-                {/* Story Card */}
-                <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 space-y-5 text-base leading-relaxed">
-                  <p>
-                    Jamaican born <strong className="text-yellow-400">Capt. Barrington Irving</strong>, Guinness World Record Holder as the first Black man and youngest person to fly solo around the world, is taking flight once again, this time for humanity.
-                  </p>
-                  <p>
-                    On November 10th & 11th, Capt. Irving will lead a massive humanitarian mission, delivering over 100,000 pounds of critical supplies aboard his own aircraft and a Boeing 737-800 cargo jet bound for Jamaica. From the runway to the heart of the island, these supplies will be placed directly into the hands of local organizations and communities in need.
-                  </p>
-                  <p>
-                    Through his 501(c)(3) non-profit organization - Experience Aviation, he has coordinated and delivered more than half a million pounds of humanitarian supplies, most notably during Hurricane Dorian in the Bahamas and Hurricane Helene in North Carolina.
-                  </p>
-                  <p className="pt-4 border-t border-white/10">
-                    <strong className="text-yellow-400">Financial contributions</strong> can be made to the Experience Aviation nonprofit organization and are <strong className="text-yellow-400">tax-deductible</strong>.
-                  </p>
-                </div>
-              </div>
-
-              {/* Right Column - Mission Details & Donation */}
-              <div className="space-y-6">
-                {/* Mission Details Card */}
-                <div className="bg-gradient-to-br from-yellow-500/20 to-yellow-600/20 backdrop-blur-sm border border-yellow-500/30 rounded-2xl p-6 lg:p-8 space-y-5">
+                {/* Mission Details Card - Left */}
+                <div className="bg-gradient-to-br from-yellow-500/20 to-yellow-600/20 backdrop-blur-sm border border-yellow-500/30 rounded-2xl p-6 sm:p-8 space-y-5">
                   <div className="flex items-center gap-3 mb-4">
                     <Calendar className="w-6 h-6 text-yellow-400" />
-                    <h2 className="text-xl font-bold">Mission Details</h2>
+                    <h2 className="text-xl sm:text-2xl font-bold">Mission Details</h2>
                   </div>
                   
-                  <div className="space-y-4 text-sm lg:text-base">
+                  <div className="space-y-4 text-sm sm:text-base">
                     <div className="flex items-start gap-3">
                       <Plane className="w-5 h-5 text-yellow-400 mt-0.5 flex-shrink-0" />
                       <div>
@@ -134,16 +144,20 @@ export default function Home() {
                   </div>
                 </div>
 
-                {/* Donation Card */}
-                <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-6 lg:p-8 space-y-6">
-                  <h3 className="text-2xl font-bold text-center text-yellow-400">DONATE NOW</h3>
+                {/* Donation Card - Right */}
+                <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-6 sm:p-8 space-y-6">
+                  <h3 className="text-2xl sm:text-3xl font-bold text-center text-yellow-400">DONATE NOW</h3>
                   
-                  {/* QR Code Placeholder */}
+                  {/* QR Code */}
                   <div className="flex justify-center">
-                    <div className="w-full max-w-[180px] aspect-square bg-white rounded-xl flex items-center justify-center shadow-lg border-2 border-white/20">
-                      <div className="text-center text-slate-600 text-xs p-4">
-                        <div className="text-3xl mb-2">📱</div>
-                        <div>QR Code</div>
+                    <div className="w-full max-w-[200px] aspect-square bg-white rounded-xl p-3 shadow-lg border-2 border-white/20">
+                      <div className="relative w-full h-full">
+                        <Image
+                          src="/images/QR-code1.jpg"
+                          alt="Donate via QR Code"
+                          fill
+                          className="object-contain"
+                        />
                       </div>
                     </div>
                   </div>
@@ -151,7 +165,7 @@ export default function Home() {
                   <Button 
                     asChild 
                     size="lg" 
-                    className="w-full bg-yellow-500 hover:bg-yellow-600 text-black font-bold text-base py-6 rounded-xl shadow-lg"
+                    className="w-full bg-yellow-500 hover:bg-yellow-600 text-black font-bold text-lg py-7 rounded-xl shadow-lg"
                   >
                     <a 
                       href="https://www.gofundme.com/f/capt-barrington-irvings-humanitarian-flight-to-jamaica?attribution_id=sl:7fb859d2-163d-4ffa-9ffc-b4dd9aa8fa75&lang=en_US&ts=1761897423&utm_campaign=man_sharesheet_dash&utm_content=amp17_te&utm_medium=customer&utm_source=copy_link"
@@ -176,12 +190,7 @@ export default function Home() {
       </section>
 
       {/* Partners Section */}
-      <section className="relative py-20 lg:py-32 bg-gradient-to-br from-slate-900 via-green-950 to-slate-900 text-white overflow-hidden">
-        {/* Subtle background pattern */}
-        <div className="absolute inset-0 opacity-5">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(255,255,255,0.1)_1px,_transparent_1px)] bg-[length:100px_100px]" />
-        </div>
-
+      <section className="relative py-20 lg:py-32 text-white overflow-hidden">
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Supply Partners */}
           <div className="mb-20">
@@ -197,26 +206,37 @@ export default function Home() {
             <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-8 lg:p-12 border border-white/10">
               <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6 lg:gap-8">
                 {[
-                  "Consulate General of Jamaica",
-                  "Memorial Healthcare System",
-                  "Florida Panthers",
-                  "Youville Rogers",
-                  "Caribbean Springs",
-                  "GEM",
-                  "Miami-Dade County",
-                  "Hope Worldwide",
-                  "Irie Osgood",
-                  "The Concours Club",
-                  "JetRx",
-                  "Palm Tree Records"
+                  { name: "Consulate General of Jamaica", logo: "/logos/consulate.png" },
+                  { name: "Memorial Healthcare System", logo: "/logos/memorial.png" },
+                  { name: "Florida Panthers", logo: "/logos/Florida_Panthers.png" },
+                  { name: "Youville Rogers", logo: "/logos/rosalind.png" },
+                  { name: "Caribbean Springs", logo: "/logos/carribeanstrong.png" },
+                  { name: "GEM", logo: "/logos/GEM-logo.webp" },
+                  { name: "Miami-Dade County", logo: "/logos/miami-dade.png" },
+                  { name: "Rogers", logo: "/logos/rogers.png" },
+                  { name: "Miramar", logo: "/logos/miramar.png" },
+                  { name: "The Concours Club", logo: "/logos/concours.png" },
+                  { name: "JetRx", logo: "/logos/JetRx.webp" },
+                  { name: "Palm Tree Records", logo: "/logos/tms.png" }
                 ].map((partner, index) => (
                   <div 
                     key={index} 
                     className="group aspect-[4/3] bg-white/5 backdrop-blur-sm rounded-xl border border-white/10 shadow-sm hover:shadow-lg hover:border-yellow-500/30 transition-all duration-300 flex items-center justify-center p-4 hover:scale-105"
                   >
-                    <div className="text-center text-slate-300 text-xs lg:text-sm font-medium group-hover:text-yellow-400 transition-colors">
-                      {partner}
-                    </div>
+                    {partner.logo ? (
+                      <div className="relative w-full h-full">
+                        <Image
+                          src={partner.logo}
+                          alt={partner.name}
+                          fill
+                          className="object-contain p-2"
+                        />
+                      </div>
+                    ) : (
+                      <div className="text-center text-slate-300 text-xs lg:text-sm font-medium group-hover:text-yellow-400 transition-colors">
+                        {partner.name}
+                      </div>
+                    )}
                   </div>
                 ))}
               </div>
@@ -237,17 +257,22 @@ export default function Home() {
             <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-8 lg:p-12 border border-white/10">
               <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
                 {[
-                  "7 Air",
-                  "Signature Aviation",
-                  "Xtreme Aviation",
-                  "Atlantic"
+                  { name: "7 Air", logo: "/logos/7air.png" },
+                  { name: "Signature Aviation", logo: "/logos/signature-aviation.webp" },
+                  { name: "Xtreme Aviation", logo: "/logos/xtreme.png" },
+                  { name: "Atlantic", logo: "/logos/Atlantic_logo.png" }
                 ].map((partner, index) => (
                   <div 
                     key={index} 
                     className="group aspect-[4/3] bg-white/5 backdrop-blur-sm rounded-xl border border-white/10 shadow-sm hover:shadow-lg hover:border-yellow-500/30 transition-all duration-300 flex items-center justify-center p-4 hover:scale-105"
                   >
-                    <div className="text-center text-slate-300 text-sm lg:text-base font-semibold group-hover:text-yellow-400 transition-colors">
-                      {partner}
+                    <div className="relative w-full h-full">
+                      <Image
+                        src={partner.logo}
+                        alt={partner.name}
+                        fill
+                        className="object-contain p-2"
+                      />
                     </div>
                   </div>
                 ))}
@@ -258,8 +283,8 @@ export default function Home() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-slate-900 text-white py-12">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <footer className="relative text-white py-12">
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row items-center justify-between gap-6">
             <div className="text-xl font-bold">
               EXPERIENCE <span className="text-yellow-400">AVIATION</span>
