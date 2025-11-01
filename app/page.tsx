@@ -11,10 +11,10 @@ export default function Home() {
           src="/images/camoflag.png"
           alt="Jamaica Flag Camo Pattern"
           fill
-          className="object-cover blur-sm opacity-30"
+          className="object-cover blur-sm opacity-40 sm:opacity-30"
           priority
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-slate-900/60 via-slate-900/40 to-slate-900/60" />
+        <div className="absolute inset-0 bg-gradient-to-b from-slate-900/50 via-slate-900/30 to-slate-900/50 sm:from-slate-900/60 sm:via-slate-900/40 sm:to-slate-900/60" />
       </div>
 
       {/* Hero Section */}
@@ -43,8 +43,16 @@ export default function Home() {
           <div className="mt-32 lg:mt-40 space-y-16">
             {/* Title Section */}
             <div className="text-center space-y-6 max-w-4xl mx-auto">
-              <div className="inline-block px-4 py-2 bg-yellow-500/20 border border-yellow-500/30 rounded-full text-yellow-400 text-sm font-medium mb-4">
-                MISSION OF HOPE
+              <div className="inline-flex justify-center mb-4 w-full px-4">
+                <div className="relative h-20 w-full max-w-xs sm:h-32 sm:max-w-2xl">
+                  <Image
+                    src="/logos/experience-aviation-white.png"
+                    alt="Experience Aviation"
+                    fill
+                    className="object-contain"
+                    priority
+                  />
+                </div>
               </div>
               <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold leading-tight">
                 Capt. Barrington Irving's
