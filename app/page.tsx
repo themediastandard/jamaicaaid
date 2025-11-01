@@ -20,31 +20,31 @@ export default function Home() {
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center text-white overflow-hidden">
         <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-          {/* Top Navigation Bar */}
-          <div className="absolute top-0 left-0 right-0 px-4 sm:px-6 lg:px-8 pt-6">
-            <div className="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-4">
+          {/* Top Navigation Bar - Desktop Only */}
+          <div className="hidden sm:block absolute top-0 left-0 right-0 px-4 sm:px-6 lg:px-8 pt-6">
+            <div className="max-w-7xl mx-auto flex flex-row justify-between items-center gap-4">
               <div className="text-xl sm:text-2xl font-bold tracking-wide">
                 EXPERIENCE <span className="text-yellow-400">AVIATION</span>
               </div>
               <div className="flex items-center gap-4 text-sm">
                 <a href="tel:3055379291" className="flex items-center gap-2 hover:text-yellow-400 transition-colors">
                   <Phone className="w-4 h-4" />
-                  <span className="hidden sm:inline">(305) 537-9291</span>
+                  <span>(305) 537-9291</span>
                 </a>
                 <a href="mailto:fly@experienceaviation.org" className="flex items-center gap-2 hover:text-yellow-400 transition-colors">
                   <Mail className="w-4 h-4" />
-                  <span className="hidden sm:inline">fly@experienceaviation.org</span>
+                  <span>fly@experienceaviation.org</span>
                 </a>
               </div>
             </div>
           </div>
 
           {/* Main Hero Content */}
-          <div className="mt-32 lg:mt-40 space-y-16">
+          <div className="space-y-16 sm:mt-32 lg:mt-40">
             {/* Title Section */}
             <div className="text-center space-y-6 max-w-4xl mx-auto">
               <div className="inline-flex justify-center mb-4 w-full px-4">
-                <div className="relative h-20 w-full max-w-xs sm:h-32 sm:max-w-2xl">
+                <div className="relative h-24 w-full max-w-sm sm:h-32 sm:max-w-2xl">
                   <Image
                     src="/logos/experience-aviation-white.png"
                     alt="Experience Aviation"
