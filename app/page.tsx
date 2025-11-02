@@ -325,6 +325,35 @@ export default function Home() {
               </div>
             </div>
           </div>
+
+          {/* Logistics Partner */}
+          <div className="mt-20">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
+                Logistics Partner
+              </h2>
+              <p className="text-slate-300 max-w-2xl mx-auto">
+                Providing essential logistics support for mission success
+              </p>
+            </div>
+            
+            <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-8 lg:p-12 border border-white/10">
+              <div className="flex justify-center">
+                <div 
+                  className="group aspect-[4/3] w-full max-w-xs bg-white/5 backdrop-blur-sm rounded-xl border border-white/10 shadow-sm hover:shadow-lg hover:border-yellow-500/30 transition-all duration-300 flex items-center justify-center p-4 hover:scale-105"
+                >
+                  <div className="relative w-full h-full">
+                    <Image
+                      src="/logos/mj.png"
+                      alt="Logistics Partner"
+                      fill
+                      className="object-contain p-2"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
