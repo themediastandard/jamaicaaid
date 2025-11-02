@@ -90,19 +90,28 @@ export default function Home() {
 
                     {/* Story Card */}
                     <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 sm:p-8 flex flex-col h-full">
-                      <h3 className="text-xl sm:text-2xl font-bold text-yellow-400 mb-6">Objective</h3>
+                      <h3 className="text-xl sm:text-2xl font-bold text-yellow-400 mb-4">Together for Jamaica: Relief in Flight - A Mission to Rebuild Jamaica</h3>
+                      <p className="text-sm italic text-slate-300 mb-6">Hurricane Melissa left a trail of devastation, but together, we can bring relief, hope, and the tools to rebuild.</p>
                       <div className="space-y-5 text-base leading-relaxed">
                         <p>
-                          Jamaican born <strong className="text-yellow-400">Capt. Barrington Irving</strong>, Guinness World Record Holder as the first Black man and youngest person to fly solo around the world, is taking flight once again, this time for humanity.
+                          When Hurricane Melissa struck Jamaica, it left behind devastation and determination. People and entire communities across the island are rebuilding, but they need help now.
                         </p>
                         <p>
-                          On November 10th & 11th, Capt. Irving will lead a massive humanitarian mission, delivering over 100,000 pounds of critical supplies aboard his own aircraft and a Boeing 737-800 cargo jet bound for Jamaica. From the runway to the heart of the island, these supplies will be placed directly into the hands of local organizations and communities in need.
+                          In response, a coalition of volunteers, pilots, and community partners, is preparing to deliver more than 100,000 pounds of critical supplies directly to the island. Spearheaded by Jamaican-born <strong className="text-yellow-400">Capt. Barrington Irving</strong>, a pilot recognized by Guinness World Records as the first Black man and youngest person to fly solo around the world, this team will fly a Boeing 737-800 cargo jet and his own aircraft from South Florida to Jamaica carrying critical survival and rebuilding supplies on two flights: November 10th and 11th.
                         </p>
                         <p>
-                          Through his 501(c)(3) non-profit organization - Experience Aviation, he has coordinated and delivered more than half a million pounds of humanitarian supplies, most notably during Hurricane Dorian in the Bahamas and Hurricane Helene in North Carolina.
+                          From the runway to remote parishes, every delivery is being coordinated with trusted local organizations working on the ground for effective last-mile distribution in order to ensure all the aid gets into the hands of those who need it.
                         </p>
+                        <p>
+                          Right now, we're gathering both donations of supplies and financial support to make these relief flights possible. You can:
+                        </p>
+                        <ul className="list-disc list-inside space-y-2 pl-2">
+                          <li>Donate funds to help fuel and launch the aircraft.</li>
+                          <li>Contribute supplies from our list of most-needed items.</li>
+                          <li>Drop off goods at one of our South Florida collection centers listed below.</li>
+                        </ul>
                         <p className="pt-4 border-t border-white/10">
-                          <strong className="text-yellow-400">Financial contributions</strong> can be made to the Experience Aviation nonprofit organization and are <strong className="text-yellow-400">tax-deductible</strong>.
+                          Every dollar and every item helps us move faster and farther, getting aid directly into the hands of families rebuilding their lives.
                         </p>
                       </div>
                     </div>
