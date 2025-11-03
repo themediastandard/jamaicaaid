@@ -272,7 +272,12 @@ export default function Home() {
                   { name: "Miramar", logo: "/logos/miramar.png" },
                   { name: "The Concours Club", logo: "/logos/concours.png" },
                   { name: "JetRx", logo: "/logos/JetRx.webp" },
-                  { name: "Palm Tree Records", logo: "/logos/tms.png" }
+                  { name: "Palm Tree Records", logo: "/logos/tms.png" },
+                  { name: "BOBM", logo: "/logos/bobm.png" },
+                  { name: "Gargamel", logo: "/logos/gargamel.png" },
+                  { name: "LHCH", logo: "/logos/lhch.png" },
+                  { name: "Var City", logo: "/logos/var-city.png" },
+                  { name: "VIP", logo: "/logos/vip.png" }
                 ].map((partner, index) => (
                   <div 
                     key={index} 
