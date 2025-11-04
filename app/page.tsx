@@ -338,12 +338,12 @@ export default function Home() {
             <p className="mt-2">14600 NW 44th Court, Opa-Locka, FL 33054</p>
           </div>
 
-          <div className="mt-3 pt-3 border-t border-slate-800 flex items-center justify-center">
+          <div className="mt-6 pt-6 border-t border-slate-800 flex items-center justify-center">
             <a 
               href="https://themediastandard.com" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="flex items-center gap-1.5 hover:opacity-80 transition-opacity"
+              className="flex flex-col items-center gap--0.0 hover:opacity-80 transition-opacity"
             >
               <span className="text-sm text-slate-400">DEVELOPED IN COLLABORATION WITH</span>
               <div className="relative h-10 w-32">
