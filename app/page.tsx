@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Phone, Mail, Instagram, Plane, Calendar, MapPin } from "lucide-react";
 import Image from "next/image";
+import GoFundMeEmbed from "@/components/GoFundMeEmbed";
 
 export default function Home() {
   return (
@@ -20,30 +21,11 @@ export default function Home() {
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center text-white overflow-hidden">
         <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-          {/* Top Navigation Bar - Desktop Only */}
-          <div className="hidden sm:block absolute top-0 left-0 right-0 px-4 sm:px-6 lg:px-8 pt-6">
-            <div className="max-w-7xl mx-auto flex flex-row justify-between items-center gap-4">
-              <div className="text-xl sm:text-2xl font-bold tracking-wide">
-                EXPERIENCE <span className="text-yellow-400">AVIATION</span>
-              </div>
-              <div className="flex items-center gap-4 text-sm">
-                <a href="tel:3055379291" className="flex items-center gap-2 hover:text-yellow-400 transition-colors">
-                  <Phone className="w-4 h-4" />
-                  <span>(305) 537-9291</span>
-                </a>
-                <a href="mailto:fly@experienceaviation.org" className="flex items-center gap-2 hover:text-yellow-400 transition-colors">
-                  <Mail className="w-4 h-4" />
-                  <span>fly@experienceaviation.org</span>
-                </a>
-              </div>
-            </div>
-          </div>
-
           {/* Main Hero Content */}
           <div className="space-y-16 sm:mt-32 lg:mt-40">
             {/* Title Section */}
             <div className="text-center space-y-6 max-w-4xl mx-auto">
-              <div className="inline-flex justify-center mb-4 w-full px-4">
+              <div className="inline-flex justify-center mb-10 w-full px-4">
                 <div className="relative h-24 w-full max-w-sm sm:h-32 sm:max-w-2xl">
                   <Image
                     src="/logos/experience-aviation-white.png"
@@ -174,68 +156,28 @@ export default function Home() {
                         Capt. Irving's Learjet 40XR & other private aircraft will support
                       </div>
                     </div>
-                  </div>
-                </div>
-
-                {/* Donation Card - Right */}
-                <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-6 sm:p-8">
-                  <div className="text-center space-y-6">
-                    <div>
-                      <h3 className="text-3xl sm:text-4xl font-bold text-yellow-400 mb-2">DONATE</h3>
-                      <p className="text-slate-300 text-sm">Your contribution makes a difference</p>
-                    </div>
-                    
-                    {/* QR Code Section */}
-                    <div className="bg-slate-900/30 rounded-xl p-6 border border-white/10">
-                      <div className="text-xs uppercase tracking-wider text-slate-300 mb-3 font-semibold">Scan to Donate</div>
-                      <div className="flex justify-center">
-                        <div className="w-full max-w-[200px] aspect-square bg-white rounded-xl p-3 shadow-xl border-2 border-yellow-500/30">
-                          <div className="relative w-full h-full">
-                            <Image
-                              src="/images/QR-code1.jpg"
-                              alt="Donate via QR Code"
-                              fill
-                              className="object-contain"
-                            />
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-
-                    {/* Donate Button */}
-                    <div className="space-y-4">
-                      <Button 
-                        asChild 
-                        size="lg" 
-                        className="w-full bg-gradient-to-r from-yellow-500 to-yellow-600 hover:from-yellow-600 hover:to-yellow-700 text-black font-bold text-lg py-7 rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105"
-                      >
-                        <a 
-                          href="https://www.gofundme.com/f/capt-barrington-irvings-humanitarian-flight-to-jamaica?attribution_id=sl:7fb859d2-163d-4ffa-9ffc-b4dd9aa8fa75&lang=en_US&ts=1761897423&utm_campaign=man_sharesheet_dash&utm_content=amp17_te&utm_medium=customer&utm_source=copy_link"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          DONATE
-                        </a>
-                      </Button>
-                      
-                      <div className="text-xs text-slate-400 italic">
-                        All donations are <span className="text-yellow-400 font-semibold">tax-deductible</span>
-                      </div>
-                    </div>
 
                     {/* Instagram Section */}
-                    <div className="pt-4 border-t border-white/10">
-                      <div className="text-xs uppercase tracking-wider text-slate-400 mb-2">Follow the Mission</div>
+                    <div className="pt-4 border-t border-yellow-500/20">
+                      <div className="text-xs uppercase tracking-wider text-slate-400 mb-3 text-center">Follow the Mission</div>
                       <a 
                         href="https://instagram.com/barringtonirving" 
                         target="_blank" 
                         rel="noopener noreferrer" 
-                        className="inline-flex items-center gap-2 px-4 py-2 bg-slate-900/40 hover:bg-slate-900/60 rounded-lg border border-white/10 hover:border-yellow-500/30 transition-all group"
+                        className="flex items-center justify-center gap-2 px-4 py-2 bg-slate-900/40 hover:bg-slate-900/60 rounded-lg border border-white/10 hover:border-yellow-500/30 transition-all group"
                       >
                         <Instagram className="w-5 h-5 text-slate-300 group-hover:text-yellow-400 transition-colors" />
                         <span className="text-slate-300 group-hover:text-yellow-400 transition-colors font-medium">@barringtonirving</span>
                       </a>
                     </div>
+                  </div>
+                </div>
+
+                {/* Donation Card - Right */}
+                <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-6 sm:p-8 flex items-center justify-center">
+                  {/* GoFundMe Embed */}
+                  <div className="bg-slate-900/30 rounded-xl p-4 border border-white/10 w-full">
+                    <GoFundMeEmbed />
                   </div>
                 </div>
               </div>
@@ -374,11 +316,7 @@ export default function Home() {
       {/* Footer */}
       <footer className="relative text-white py-12">
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-6">
-            <div className="text-xl font-bold">
-              EXPERIENCE <span className="text-yellow-400">AVIATION</span>
-            </div>
-            
+          <div className="flex flex-col items-center justify-center gap-6">
             <div className="flex flex-col sm:flex-row items-center gap-6 text-sm">
               <a href="tel:3055379291" className="flex items-center gap-2 hover:text-yellow-400 transition-colors">
                 <Phone className="w-4 h-4" />
@@ -398,6 +336,25 @@ export default function Home() {
           <div className="mt-8 pt-8 border-t border-slate-800 text-center text-sm text-slate-400">
             <p>&copy; 2025 Experience Aviation. All rights reserved. 501(c)(3) Non-Profit Organization.</p>
             <p className="mt-2">14600 NW 44th Court, Opa-Locka, FL 33054</p>
+          </div>
+
+          <div className="mt-3 pt-3 border-t border-slate-800 flex items-center justify-center">
+            <a 
+              href="https://themediastandard.com" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="flex items-center gap-1.5 hover:opacity-80 transition-opacity"
+            >
+              <span className="text-sm text-slate-400">DEVELOPED IN COLLABORATION WITH</span>
+              <div className="relative h-10 w-32">
+                <Image
+                  src="/logos/tms-text-logo-white.png"
+                  alt="TMS"
+                  fill
+                  className="object-contain"
+                />
+              </div>
+            </a>
           </div>
         </div>
       </footer>
