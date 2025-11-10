@@ -46,7 +46,7 @@ export default function Home() {
               <p className="text-lg sm:text-xl text-slate-300 max-w-2xl mx-auto leading-relaxed">
                 Delivering over 100,000 pounds of critical supplies to communities in need.
                 <br />
-                November 10th & 11th, 2024
+                November 10th & 11th, 2025
               </p>
             </div>
 
