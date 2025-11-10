@@ -43,11 +43,17 @@ export default function Home() {
                 <br />
                 to Jamaica
               </h1>
-              <p className="text-lg sm:text-xl text-slate-300 max-w-2xl mx-auto leading-relaxed">
-                Delivering over 100,000 pounds of critical supplies to communities in need.
-                <br />
-                November 10th & 11th, 2025
-              </p>
+              <div className="max-w-2xl mx-auto space-y-4">
+                <p className="text-lg sm:text-xl text-slate-300 leading-relaxed">
+                  Delivering over 100,000 pounds of critical supplies to communities in need.
+                </p>
+                <div className="flex items-center justify-center gap-2 text-yellow-400">
+                  <Calendar className="w-5 h-5" />
+                  <p className="text-lg sm:text-xl font-semibold">
+                    November 10th & 11th, 2025
+                  </p>
+                </div>
+              </div>
             </div>
 
             {/* Content - Symmetrical 2-Column on Desktop, Single Column on Mobile */}
